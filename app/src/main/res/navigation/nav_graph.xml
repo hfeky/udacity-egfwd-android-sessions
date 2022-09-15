@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.husseinelfeky.session2.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_master"
+            app:destination="@id/fragment_master"
+            app:popUpTo="@id/fragment_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_master"
+        android:name="com.husseinelfeky.session2.ui.MasterFragment"
+        android:label="Master"
+        tools:layout="@layout/fragment_master">
+        <action
+            android:id="@+id/action_fragment_master_to_fragment_detail"
+            app:destination="@id/fragment_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_detail"
+        android:name="com.husseinelfeky.session2.ui.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail" />
+
+</navigation>
