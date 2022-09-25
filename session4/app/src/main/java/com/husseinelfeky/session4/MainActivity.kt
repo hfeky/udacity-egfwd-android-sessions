@@ -11,6 +11,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private val coroutineScope =
+        CoroutineScope(SupervisorJob() + CoroutineName("MainActivityScope"))
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -32,14 +35,16 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun showFactorial(number: Int) {
-        CoroutineScope(SupervisorJob()).launch(Dispatchers.Default) {
+        coroutineScope.launch(Dispatchers.Default) {
             // Run on default thread.
+            println("Coroutine ${coroutineContext[CoroutineName.Key]} is running on thread ${Thread.currentThread().name}.")
             val result = findFactorial(number)
 
             // TODO: Try replacing [Dispatchers.Main] with any other dispatcher, and enter 25 as the
             //  input.
             withContext(Dispatchers.Main) {
                 // Run on main thread.
+                println("Coroutine ${coroutineContext[CoroutineName.Key]} is running on thread ${Thread.currentThread().name}.")
                 binding.tvResult.text = "$number! = $result"
             }
         }
