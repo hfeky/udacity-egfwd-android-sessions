@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">Session 5</string>
+
+    <string name="big_ramy">Big Ramy</string>
+
+    <string name="lorem_ipsum_title">Lorem Ipsum Title</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+
+    <string name="btn_show_default_dialog">Show Default Dialog</string>
+    <string name="btn_show_material_dialog">Show Material Dialog</string>
+    <string name="btn_view_notification">View Notification</string>
+
+    <string name="hint_label">Label</string>
+
+    <string name="btn_positive">Yes</string>
+    <string name="btn_negative">No</string>
+    <string name="btn_neutral">Cancel</string>
+
+    <string name="message_positive_clicked">Positive button clicked</string>
+    <string name="message_negative_clicked">Negative button clicked</string>
+    <string name="message_neutral_clicked">Neutral button clicked</string>
+
+    <string name="channel_news_description">Read news from the internet.</string>
+    <string name="notification_title">Breaking News</string>
+    <string name="notification_message">Read the latest breaking news.</string>
+    <string name="view_details">View Details</string>
+
+</resources>
