@@ -7,22 +7,22 @@
 
     <com.husseinelfeky.session6.customviews.RouteView
         android:id="@+id/rsv1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:orientation="horizontal"
         app:routeColor="@color/route_segment"
         app:shape="start" />
 
     <com.husseinelfeky.session6.customviews.RouteView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:orientation="horizontal"
         app:routeColor="@color/route_segment"
         app:shape="middle" />
 
     <com.husseinelfeky.session6.customviews.RouteView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:orientation="horizontal"
         app:routeColor="@color/route_segment"
         app:shape="end" />

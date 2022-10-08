@@ -67,6 +67,49 @@ class RouteView @JvmOverloads constructor(
         paint.color = routeColor
     }
 
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        val desiredWidth = 60.dp.toInt()
+        val desiredHeight = 60.dp.toInt()
+
+        val widthMode = MeasureSpec.getMode(widthMeasureSpec)
+        val widthSize = MeasureSpec.getSize(widthMeasureSpec)
+
+        val heightMode = MeasureSpec.getMode(heightMeasureSpec)
+        val heightSize = MeasureSpec.getSize(heightMeasureSpec)
+
+        // Measure width.
+        val width = when (widthMode) {
+            MeasureSpec.EXACTLY -> {
+                // Must be this size
+                widthSize
+            }
+            MeasureSpec.AT_MOST -> {
+                // Can't be bigger than min(desiredWidth, widthSize)
+                desiredWidth.coerceAtMost(widthSize)
+            }
+            else -> {
+                desiredWidth
+            }
+        }
+
+        // Measure height.
+        val height = when (heightMode) {
+            MeasureSpec.EXACTLY -> {
+                // Must be this size
+                heightSize
+            }
+            MeasureSpec.AT_MOST -> {
+                // Can't be bigger than min(desiredHeight, heightSize)
+                desiredHeight.coerceAtMost(heightSize)
+            }
+            else -> {
+                desiredHeight
+            }
+        }
+
+        setMeasuredDimension(width, height)
+    }
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
