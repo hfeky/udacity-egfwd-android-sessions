@@ -1,0 +1,25 @@
+<resources>
+
+    <declare-styleable name="RouteView">
+        <attr name="routeColor" format="color" />
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+        <attr name="shape" format="enum">
+            <enum name="single" value="0" />
+            <enum name="middle" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+            <enum name="start" value="4" />
+            <enum name="end" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DialView">
+        <attr name="fanColor1" format="color" />
+        <attr name="fanColor2" format="color" />
+        <attr name="fanColor3" format="color" />
+    </declare-styleable>
+
+</resources>
